@@ -1,0 +1,54 @@
+.fader-none {
+    visibility:hidden;
+}
+
+.fader-go {
+    -webkit-animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.custom-font {
+    font-family: 'Permanent Marker', cursive;
+}
+
+#my-pad {
+    padding-left: 30px;
+}
+
+#row-pad {
+    margin-top:50px;
+}
+
+#img-size {
+    height: 15em;
+    width: 80%;
+    border-radius: 50%;
+}
+
+#logo {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 40px;
+    padding-top: 50px;
+}
+
+h3 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+thead {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 20px;
+}
+
+#weather-playlist {
+    font-family: 'Permanent Marker', cursive;
+
+}
+

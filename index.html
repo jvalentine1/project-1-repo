@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project 1 Test</title>
+    <!--CSS Rest-->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <!--Materialize CDN's-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!--jQuery CDN-->
+    <script src="https://code.jquery.com/jquery-3.4.0.js" integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper #4db6ac teal lighten-2">
+          <a href="#" class="brand-logo custom-font"><i id="my-pad" class="material-icons">cloud</i>Mood Tunes</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#">Music</a></li>
+            <li><a href="#">Weather</a></li>
+            <li><a href="#">Activities</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container">
+          <div class="row" id="row-pad">
+              <div class="col s4">
+                  <img id="img-size" class="fader-start fader-none" src="https://cmgpbpeyeonthestorm.files.wordpress.com/2018/02/download.gif" alt="weather gif">
+              </div>
+              <div class="col s1"></div>
+              <div class="col s7">
+                  <h2 class="teal-text teal-lighten-2" id="logo"></h2>
+              </div>
+          </div>
+
+          <div class="row fader-start fader-none" id="row-pad">
+              <div class="col s4"></div>
+              <div class="col s4">
+                  <h3 class="teal-text teal-lighten-2">Weather Playlists</h3>
+              </div>
+          </div>
+          <div class="row fader-start fader-none" id="row-pad">
+              <div class="col s12">
+                    <table class="teal-text teal-lighten-2" id="weather-playlist">
+                            <thead>
+                              <tr>
+                                  <th>Artist</th>
+                                  <th>Genre</th>
+                                  <th>Weather</th>
+                              </tr>
+                            </thead>
+                    
+                            <tbody>
+                              <tr>
+                                <td>Eminem</td>
+                                <td>Hip-hop</td>
+                                <td>Cloudy</td>
+                              </tr>
+                              <tr>
+                                <td>Lady Ga Ga</td>
+                                <td>Pop</td>
+                                <td>Sunny</td>
+                              </tr>
+                            </tbody>
+                          </table>
+              </div>
+          </div>
+
+          <div class="row fader-start fader-none" id="row-pad">
+                <div class="col s4"></div>
+                <div class="col s4">
+                    <h3 class="teal-text teal-lighten-2">Activity Playlists</h3>
+                </div>
+            </div>
+            <div class="row fader-start fader-none" id="row-pad">
+                <div class="col s12">
+                      <table class="teal-text teal-lighten-2" id="weather-playlist">
+                              <thead>
+                                <tr>
+                                    <th>Artist</th>
+                                    <th>Genre</th>
+                                    <th>Activity</th>
+                                </tr>
+                              </thead>
+                      
+                              <tbody>
+                                <tr>
+                                  <td>Allman Brothers</td>
+                                  <td>Rock</td>
+                                  <td>Work</td>
+                                </tr>
+                                <tr>
+                                  <td>Garth Brooks</td>
+                                  <td>Country</td>
+                                  <td>Leisure</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                </div>
+            </div>
+      </div>
+</body>
+<!--Javascript link-->
+<script type="text/javascript" src="assets/javascript/project.js"></script>
+</html>
