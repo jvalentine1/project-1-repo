@@ -1,3 +1,8 @@
+.home-page {
+    height:100vh;
+    
+}
+
 .fader-none {
     visibility:hidden;
 }
@@ -11,6 +16,10 @@
     to {opacity: 1;}
 }
 
+.my-nav {
+    
+} 
+
 .custom-font {
     font-family: 'Permanent Marker', cursive;
 }
@@ -20,7 +29,7 @@
 }
 
 #row-pad {
-    margin-top:50px;
+    margin-top:30px;
 }
 
 #img-size {
@@ -52,3 +61,20 @@ thead {
 
 }
 
+.button-style {
+    font-family: 'Permanent Marker', cursive;
+    font-size:20px; 
+    color:white;
+    padding: 15px;
+}
+
+.button-style:hover {
+    cursor: pointer;
+    border: 1px solid black;
+    background-color: white;
+    color:aqua;
+}
+
+.weather-font {
+    font-family: 'Permanent Marker', cursive;
+}

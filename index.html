@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Project 1 Test</title>
+    <title>Project 1</title>
     <!--CSS Rest-->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <!--Google Fonts-->
@@ -16,19 +16,24 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!--jQuery CDN-->
     <script src="https://code.jquery.com/jquery-3.4.0.js" integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
+    <!--AJAX CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 <body>
-    <nav>
-        <div class="nav-wrapper #4db6ac teal lighten-2">
-          <a href="#" class="brand-logo custom-font"><i id="my-pad" class="material-icons">cloud</i>Mood Tunes</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="#">Music</a></li>
-            <li><a href="#">Weather</a></li>
-            <li><a href="#">Activities</a></li>
-          </ul>
-        </div>
-      </nav>
-
+    <!--Nav Bar-->
+    <nav class="my-nav">
+            <div class="nav-wrapper #4db6ac teal lighten-2">
+              <a href="#" class="brand-logo custom-font"><i id="my-pad" class="material-icons">cloud</i>Mood Tunes</a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#input">Music</a></li>
+                <li><a href="weather.html">Weather</a></li>
+              </ul>
+            </div>
+          </nav>
+    <section class="home-page">
+    
+      <!--Home page Image and logo render div-->
       <div class="container">
           <div class="row" id="row-pad">
               <div class="col s4">
@@ -39,74 +44,62 @@
                   <h2 class="teal-text teal-lighten-2" id="logo"></h2>
               </div>
           </div>
-
+          <!--Div with button that makes the authorize and redirect call to spotify server-->
           <div class="row fader-start fader-none" id="row-pad">
-              <div class="col s4"></div>
-              <div class="col s4">
-                  <h3 class="teal-text teal-lighten-2">Weather Playlists</h3>
-              </div>
-          </div>
-          <div class="row fader-start fader-none" id="row-pad">
-              <div class="col s12">
-                    <table class="teal-text teal-lighten-2" id="weather-playlist">
-                            <thead>
-                              <tr>
-                                  <th>Artist</th>
-                                  <th>Genre</th>
-                                  <th>Weather</th>
-                              </tr>
-                            </thead>
-                    
-                            <tbody>
-                              <tr>
-                                <td>Eminem</td>
-                                <td>Hip-hop</td>
-                                <td>Cloudy</td>
-                              </tr>
-                              <tr>
-                                <td>Lady Ga Ga</td>
-                                <td>Pop</td>
-                                <td>Sunny</td>
-                              </tr>
-                            </tbody>
-                          </table>
-              </div>
-          </div>
-
-          <div class="row fader-start fader-none" id="row-pad">
-                <div class="col s4"></div>
+                <div class="col s5"></div>
                 <div class="col s4">
-                    <h3 class="teal-text teal-lighten-2">Activity Playlists</h3>
+                      <button class="#4db6ac teal lighten-2 button-style" onclick="window.location.href='https://accounts.spotify.com/authorize?client_id=f738bd7b11ed4c76ba93c8c17f9f8581&response_type=token&redirect_uri=http://localhost:8081';">Login To Spotify</button>
                 </div>
             </div>
+            <!--Row with user city input and submit button that makes the call to the weather api and also calls spotify AJAX-->
             <div class="row fader-start fader-none" id="row-pad">
-                <div class="col s12">
-                      <table class="teal-text teal-lighten-2" id="weather-playlist">
-                              <thead>
-                                <tr>
-                                    <th>Artist</th>
-                                    <th>Genre</th>
-                                    <th>Activity</th>
-                                </tr>
-                              </thead>
-                      
-                              <tbody>
-                                <tr>
-                                  <td>Allman Brothers</td>
-                                  <td>Rock</td>
-                                  <td>Work</td>
-                                </tr>
-                                <tr>
-                                  <td>Garth Brooks</td>
-                                  <td>Country</td>
-                                  <td>Leisure</td>
-                                </tr>
-                              </tbody>
-                            </table>
+                <div class="col s4">
+                    <!--Takes in user input and submits-->
+                      <input class="city-input" id="input_text" type="text" data-length="10" placeholder="Enter Your City">
+                      <a class="waves-effect waves-light btn" id="submit">Submit</a>
                 </div>
+                <!--City name will be stored here-->
+                <div class="col s4">
+                    <h3 class="teal-text teal-lighten-2" id="city-input"></h3>
+                </div>
+                <!--City temperature will be stored here-->
+                <div class="col s4">
+                        <h3 class="teal-text teal-lighten-2" id="temp-input"></h3>
+                </div>
+            </div>
+            <!--Row Containing spotify track information-->
+            <div class="row fader-start fader-none" id="row-pad">
+                <!--This div will contain the song play window-->
+                    <div class="col s4" id="generate"></div>
+                <!--Spacer column-->
+                    <!-- <div class="col s1"></div> -->
+                <!--This div will contain the track information-->
+                    <div class="col s8 fader-none" id="track-table">
+                            <table>
+                                    <thead>
+                                      <tr>
+                                          <th>Artist</th>
+                                          <th>Track</th>
+                                          <th>Album</th>
+                                      </tr>
+                                    </thead>
+                                        <tbody>
+                                            <tr>
+                                              <td id="artist"></td>
+                                              <td id="track"></td>
+                                              <td id="album"></td>
+                                            </tr>
+                                        <tbody>    
+                            <table>
+                    </div>
             </div>
       </div>
+    </section>
+
+    
+    <!--Javascipt styling link-->
+    <script type="text/javascript" src="assets/javascript/style.js"></script>
+    <!--Javascript logic link-->
+    <script type="text/javascript" src="assets/javascript/project.js"></script>
 </body>
-<!--Javascript link-->
-<script type="text/javascript" src="assets/javascript/project.js"></script>
 </html>

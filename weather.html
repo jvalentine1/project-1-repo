@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project 1</title>
+    <!--CSS Rest-->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <!--Materialize CDN's-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!--jQuery CDN-->
+    <script src="https://code.jquery.com/jquery-3.4.0.js" integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
+    <!--AJAX CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <!--Nav Bar-->
+    <nav class="my-nav">
+        <div class="nav-wrapper #4db6ac teal lighten-2">
+                <a href="index.html" class="brand-logo custom-font"><i id="my-pad" class="material-icons">cloud</i>Mood Tunes</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#input">Music</a></li>
+                <li><a href="weather.html">Weather</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--Main Container-->
+    <div class="container">
+        <!--Page title-->
+        <div class="row" id="row-pad">
+            <div class="col s12">
+                <h3 class="teal-text teal-lighten-2 weather-head"></h3>
+            </div>
+        </div>
+        <!--Page content-->
+        <div class="row fader-start fader-none" id="row-pad">
+            <div class="col s1"></div>
+            <div class="col s10">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>City</th>
+                            <th>Temperature</th>
+                            <th>Forecast</th>
+                            <th>Precipitation</th>
+                        </tr>
+                    </thead>
+        
+                    <tbody class="weather-body ">
+                        
+                    </tbody>
+                </table>
+            </div>
+            <div class="col s1 test"></div>
+        </div>
+    </div>
+
+    <!--Javascipt styling link-->
+    <script type="text/javascript" src="assets/javascript/style.js"></script>
+    <!--Javascript logic link-->
+    <script type="text/javascript" src="assets/javascript/project.js"></script>
+</body>
+</html>
