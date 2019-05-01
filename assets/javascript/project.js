@@ -84,7 +84,7 @@ $("#submit").on("click", function(e) {
               }
               else {
               //spotify query
-              var queryURL = "https://api.spotify.com/v1/tracks/0WKYRFtH6KKbaNWjsxqm70; 
+              var queryURL = "https://api.spotify.com/v1/tracks/0WKYRFtH6KKbaNWjsxqm70"; 
               //spotify api retrieve
               $.ajax({
                 url: queryURL,
