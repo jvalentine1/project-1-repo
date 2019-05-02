@@ -1,5 +1,5 @@
 //Logo Populate Variables
-var logo = "Music That Follows You";
+var logo = "Inspiration That Follows You";
 var logoCount = 0;
 
 //Fades In Page Content
@@ -18,39 +18,11 @@ function logoRender() {
     
     $("#logo").append(logo[logoCount]);
     logoCount++;
-    if (logoCount === 22) {
+    if (logoCount === logo.length) {
         clearInterval(logoRender);
     }
 }
 
 //Calls logo render function and sets timeout for all page fadeins
 openPage();
-setTimeout(fadeIn, 500);
-
-var title = "Your Places";
-var titleCount = 0;
-
-//Fades In Page Content
-function weatherFadeIn() {
-    $(".fader-start").removeClass("fader-none");
-    $(".fader-start").addClass("fader-go");
-}
-
-//sets interval for weatherRender
-function weatherPage() {
-    setInterval(weatherRender, 50);
-}
-
-//Populates application logo
-function weatherRender() {
-    
-    $(".weather-head").append(title[titleCount]);
-    titleCount++;
-    if (titleCount === 11) {
-        clearInterval(weatherRender);
-    }
-}
-
-//Calls logo render function and sets timeout for all page fadeins
-weatherPage();
-setTimeout(weatherFadeIn, 500);
+setTimeout(fadeIn, 1000);
