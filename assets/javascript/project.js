@@ -76,7 +76,7 @@ $("#submit").on("click", function(e) {
 //this function renders the appropriate quote
   function quoteRender(x) {
     var key = "SOJfd3xKk_kDAye_unZQwweF";
-            var queryURL = "http://quotes.rest/qod.json?category=" + quoteCat[x];
+            var queryURL = "https://quotes.rest/qod.json?category=" + quoteCat[x];
             $.ajax({
                 url: queryURL,
                 method:"GET",
