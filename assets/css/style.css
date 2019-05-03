@@ -9,6 +9,7 @@ html, body {
 }
 
 .body {
+    height:100vh;
     background-image: url(https://hdwallsource.com/img/2014/9/polar-lights-hd-34702-35485-hd-wallpapers.jpg);
     -webkit-animation: slide 20s linear infinite;
 }
@@ -16,6 +17,16 @@ html, body {
 @-webkit-keyframes slide {
     from { background-position: 0 0; }
     to { background-position: -400px 0; }
+}
+
+.login {
+    height:100vh;
+    background-image: url(http://neurosynaptic.com/wp-content/uploads/2014/10/001-subtle-light-pattern-background-texture-vol5.jpg);
+    -webkit-animation: slide 20s linear infinite;
+}
+
+.log-margin {
+    padding-top: 100px;
 }
 
 .weather-page {
@@ -47,6 +58,12 @@ html, body {
     
 } 
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width:100%;
+}
+
 .custom-font {
     font-family: 'Permanent Marker', cursive;
 }
@@ -69,6 +86,7 @@ html, body {
     font-family: 'Permanent Marker', cursive;
     font-size: 40px;
     padding-top: 50px;
+    color:white;
 }
 
 h1 {
@@ -81,6 +99,7 @@ h3 {
     font-family: 'Permanent Marker', cursive;
     font-size: 30px;
     text-align: center;
+    color:white;
     text-decoration: underline;
 }
 
@@ -94,6 +113,10 @@ h5 {
     font-family: 'Permanent Marker', cursive;
     font-size: 25px;
     text-align: center;
+}
+
+.color-change {
+    color:white;
 }
 
 #btn-align {
@@ -115,6 +138,10 @@ h5 {
     border: solid 1px black;
 }
 
+table{
+    color:white;
+}
+
 thead {
     font-family: 'Permanent Marker', cursive;
     font-size: 20px;
@@ -125,6 +152,13 @@ tbody {
     font-size: 15px;
 }
 
-.page-2 {
+.my-info {
     height: 100vh;
+    background-image: url(https://hdwallsource.com/img/2014/9/polar-lights-hd-34702-35485-hd-wallpapers.jpg);
+    -webkit-animation: slide 20s linear infinite;
+
+}
+
+#info-pad {
+    padding-top: 120px;
 }

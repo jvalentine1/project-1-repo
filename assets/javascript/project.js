@@ -10,6 +10,11 @@ var weatherGif = ["https://thumbs.gfycat.com/WellinformedHoarseAnnashummingbird-
 $("#submit").on("click", function(e) {
 
     e.preventDefault();
+    var section = $(this).attr("href");
+    $("html, body").animate({
+        scrollTop: $(section).offset().top
+    });
+
     var city = $("#input_text").val().trim();
     console.log(city);
     $("#input_text").val("");
@@ -98,12 +103,17 @@ $("#submit").on("click", function(e) {
     img.attr("id", "img-size");
     img.attr("src", weatherGif[y]);
 
-    $("#gif-input").html(img);
+    $(".weather-gif").html(img);
   }
 
   $('#fact').on('click', function (event) {
     
     event.preventDefault();
+
+    event.preventDefault();
+    var x = $(".body").height();
+    $('html, body').animate({ scrollTop: x }, 500);
+    
     var queryURL = "http://numbersapi.com/" + day + "/date";
     $.ajax({
       url: queryURL,
