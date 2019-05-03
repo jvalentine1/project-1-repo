@@ -76,7 +76,8 @@ $("#submit").on("click", function(e) {
 //this function renders the appropriate quote
   function quoteRender(x) {
     var key = "SOJfd3xKk_kDAye_unZQwweF";
-            var queryURL = "http://quotes.rest/qod.json?category=" + quoteCat[x];
+            // var queryURL = "http://quotes.rest/qod.json?category=" + quoteCat[x];
+            var queryURL = "http://quotes.rest/quote/categories.json?start=300";
 
             $.ajax({
                 url: queryURL,
@@ -113,7 +114,7 @@ $("#submit").on("click", function(e) {
     event.preventDefault();
     var x = $(".body").height();
     $('html, body').animate({ scrollTop: x }, 500);
-    
+
     var queryURL = "http://numbersapi.com/" + day + "/date";
     $.ajax({
       url: queryURL,
