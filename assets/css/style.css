@@ -9,7 +9,7 @@ html, body {
 }
 
 .body {
-    background-image: url(http://neurosynaptic.com/wp-content/uploads/2014/10/001-subtle-light-pattern-background-texture-vol5.jpg);
+    background-image: url(https://hdwallsource.com/img/2014/9/polar-lights-hd-34702-35485-hd-wallpapers.jpg);
     -webkit-animation: slide 20s linear infinite;
 }
 
@@ -123,4 +123,8 @@ thead {
 tbody {
     font-family: 'Permanent Marker', cursive;
     font-size: 15px;
+}
+
+.page-2 {
+    height: 100vh;
 }
