@@ -160,5 +160,13 @@ tbody {
 }
 
 #info-pad {
-    padding-top: 120px;
+    padding-top: 110px;
+}
+
+#generate {
+    font-family: 'Abril Fatface', cursive;
+    background-color: ivory;
+    padding:5px;
+    border-radius: 20%;
+    line-height: 1.2;
 }
