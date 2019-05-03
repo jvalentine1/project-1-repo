@@ -113,7 +113,7 @@ $("#submit").on("click", function(e) {
     var x = $(".body").height();
     $('html, body').animate({ scrollTop: x }, 500);
 
-    var queryURL = "https://numbersapi.com/" + day + "/date";
+    var queryURL = "http://numbersapi.com/" + day + "/date";
     $.ajax({
       url: queryURL,
       method: "GET",
