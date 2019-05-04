@@ -113,15 +113,31 @@ $("#submit").on("click", function(e) {
     var x = $(".body").height();
     $('html, body').animate({ scrollTop: x }, 500);
 
-    var queryURL = "http://numbersapi.com/" + day + "/date";
+    event.preventDefault();
+    var queryURL =     "https://api.adviceslip.com/advice";
     $.ajax({
       url: queryURL,
       method: "GET",
     }).then(function (response) {
-      console.log(response);
-      $("#logo").text(response);
-    
-    })
-})
+     console.log(response);
+      var r = response.split(":")
+      console.log(r);
+      var x = r[2].split("\"");
+      console.log(x[0]);
+   
+      $("#logo").html("&#34" + x[1] + "&#34");
 
-var day = moment().format("M/DD");
+    });
+});
+
+// var day = moment().format("M/DD");
+
+// var queryURL = "http://numbersapi.com/" + day + "/date";
+//     $.ajax({
+//       url: queryURL,
+//       method: "GET",
+//     }).then(function (response) {
+//       console.log(response);
+//       $("#logo").text(response);
+    
+//     })

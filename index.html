@@ -44,8 +44,9 @@
       <div class="nav-wrapper #00b0ff light-blue accent-3">
         <a href="#" class="brand-logo custom-font"><i id="my-pad" class="material-icons">cloud</i>Mood Quotes</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a id="quoteFind" href="#">Find A Quote</a></li>
-          <li><a id="fact" href="#">Daily Fact</a></li>
+            <li><a id="email-input" href="#"></a></li>
+          <li><a id="quoteFind" href="#">New Place</a></li>
+          <li><a id="fact" href="#">Daily Advice</a></li>
 
         </ul>
       </div>
@@ -84,7 +85,7 @@
     <!--Row containing quote info-->
     <div class="row" id="info-pad">
       <!--City name will be stored here-->
-      <div class="col s3 weather-gif">
+      <div class="col s3 weather-gif fader-start fader-none2">
 
       </div>
       <div class="col s3">
@@ -98,18 +99,17 @@
           <h5 class="color-change" id="for-input"></h5>
         </div>
         <!--This div will contain the quote-->
-        <div class="col s12 pink-text accent-2">
+        <div class="col s12 fader-start fader-none2">
           <h4 class="light-blue-text accent-3" id="generate"></h4>
         </div>
       </div>
       <!--Row that allows you to save a quote to a database but requires login information-->
       <div class="row" id="row-pad">
         <div class="col s12 fader-start fader-none2" id="btn-align">
-          <button class="btn-style">Save This Quote</button>
+          <a class="btn-style" id="trivia-btn" href="#trivia">Try Some Trivia</a>
         </div>
       </div>
       <!--Row that gives you the quote information-->
-      <div class="container">
       <div class="row">
         <div class="col s12 fader-none2" id="track-table">
           <h3>Quote Info</h3>
@@ -129,6 +129,34 @@
               <table>
         </div>
       </div>
+  </section>
+  <section class="trivia-section" id="trivia">
+    <div class="row triv-margin">
+      <div class="col s12 question-pad">
+        <h3 class="teal-text teal-lighten-2" id="triv-ques"></h3>
+      </div>
+    </div>
+    <div class="container">
+    <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="text" id="textarea1" class="materialize-textarea user-answer" placeholder="your answer">
+            </div>
+          </div>
+        </form>
+      </div>
+      <a class="btn btn-lg btn-primary" id="triv-submit">Submit</a>
+      <div class="row">
+        <div class="col s12">
+          <h3 class="teal-text teal-lighten-2" id="stats"></h3>
+        </div>
+      </div>
+      <div class="row new-but btn-none">
+          <div class="col s12">
+              <a class="btn btn-lg btn-primary" id="new-question">New Question</a>
+          </div>
+        </div>
     </div>
   </section>
 </body>

@@ -25,6 +25,17 @@ html, body {
     -webkit-animation: slide 20s linear infinite;
 }
 
+.trivia-section {
+    height:100vh;
+    width:100%;
+    background-image: url(http://neurosynaptic.com/wp-content/uploads/2014/10/001-subtle-light-pattern-background-texture-vol5.jpg);
+    -webkit-animation: slide 20s linear infinite;
+}
+
+.triv-margin {
+    margin-top: 50px;
+}
+
 .log-margin {
     padding-top: 100px;
 }
@@ -169,4 +180,12 @@ tbody {
     padding:5px;
     border-radius: 20%;
     line-height: 1.2;
+}
+
+.question-pad {
+    margin-top: 100px;
+}
+
+.btn-none {
+    display:none;
 }
